@@ -11,11 +11,20 @@ def draw_white(y,x,side):
 def rec(y,x,side):
     if side<3:
         return
-    three=side//3
+    T=side//3
     
-    draw_white(y+three,x+three,three)
+    draw_white(y+T,x+T,T)
+    rec(y,x,T)
+    rec(y+T,x,T)
+    rec(y+2*T,x,T)
     
-
+    rec(y,x+T,T)
+    rec(y+ 2*T,x+T,T)
+    
+    rec(y,x+2*T,T)
+    rec(y+T,x+2*T,T)
+    rec(y+2*T,x+2*T,T) 
+    
 rec(0,0,n)
 for i in range(0,len(L)):
     print(''.join(L[i]))
