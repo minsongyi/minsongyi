@@ -18,4 +18,4 @@ def rec(y,x,side):
 
 rec(0,0,n)
 for i in range(0,len(L)):
-    print(*L[i])
+    print(''.join(L[i]))
