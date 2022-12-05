@@ -1,0 +1,5 @@
+echo server 쪽 복사해서
+server.py 에 복붙
+
+client도 마찬가지
+
