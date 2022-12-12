@@ -8,7 +8,7 @@ for i in range(n):
 white=0
 blue=0
 
-def is_same(y,x,side):
+def is_not_same(y,x,side):
     global white,blue
     q=L[0][0]
     num=0
@@ -17,33 +17,33 @@ def is_same(y,x,side):
             if L[i][j]==q:
                 num+=1
     if num!=n*n:
-        return False
+        return True
     else:
         if q==1:
             blue +=1
         else:
             white +=1
-            
+        return False
 
 def rec(y,x,side):
     global white, blue
     s= side//2
-    if is_same(y,x,side):
+    if is_not_same(y,x,side):
         rec(y,x,s)
         rec(y+s,x,s) 
         rec(y,x+s,s)
         rec(y+s,x+s,s)
     
-if is_same(0,0,n)==False:
+if is_not_same(0,0,n)==True:
     rec(0,0,n)
     
-# else:
-#     if L[0][0]==1:
-#         white=0
-#         blue=1
-#     else:
-#         white=1
-#         blue=0
+else:
+    if L[0][0]==1:
+        white=0
+        blue=1
+    else:
+        white=1
+        blue=0
         
 print(white)
 print(blue)
