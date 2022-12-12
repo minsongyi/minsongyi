@@ -4,7 +4,7 @@ sys.setrecursionlimit(25000)
 n= int(input())
 L=[]
 for i in range(0,n):
-    a= [*map(int, input().split())] 
+    a= input()
     L.append(a)
     
 dx=[0,0,1,-1]
