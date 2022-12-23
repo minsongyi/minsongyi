@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(25000)
+sys.setrecursionlimit(30000)
 
 n,m = [*map(int, input().split())]
 L=[]
@@ -46,4 +46,8 @@ for i in range(0,n):
             An.append(a)
     
 print(d)
-print(max([]))
+if d==0:
+    print(0)
+else:
+    print(max(An))
+#print(max([])) ValueError: max() arg is an empty sequence 
